@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Management System</title>
+    <style>
+       /* General Styles */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5EFE7; /* Main background */
+    color: #213555; /* Primary text color */
+    line-height: 1.6;
+    height: 100%;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    background-color: #213555; /* Dark blue */
+    color: #F5EFE7; /* Off-white */
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+}
+.content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #D8C4B6; /* Light gray */
+    font-style: italic;
+}
+
+/* Section Styles */
+div {
+    padding: 30px;
+    margin: 10px auto;
+    background-color: #F5EFE7; /* Off-white */
+    border: 1px solid #3E5879; /* Blue-gray border */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(62, 88, 121, 0.2);
+}
+
+.tiles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 20px auto;
+    gap: 0px;
+    position: relative;
+}
+
+.tile2 {
+    display: flex;
+    background-color: #D8C4B6; /* Light gray */
+    flex: 1 1 calc(33.33% - 20px);
+    padding: 10px;
+    border-radius: 3mm;
+    max-width: 404px;
+    height: 20px;
+    cursor: pointer; /* Adds the hand pointer on hover */
+    color: #213555; /* Dark blue text */
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    justify-content: center;
+    align-items: center;
+}
+.tile2:hover {
+    background-color: #3E5879; /* Blue-gray on hover */
+    color: #F5EFE7; /* Off-white text */
+}
+
+.tile2 h2 {
+    margin: 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #213555; /* Dark blue */
+    color: #F5EFE7; /* Off-white */
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    position: absolute;
+    top: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Image Styling */
+#qrmedia {
+    position: absolute;
+    left: 40%; 
+    height: 35%;
+    width: 20%;
+}
+
+#img1, #img2 {
+    border-radius: 20px;
+    height: 50%;
+    width: 20%;
+}
+
+#img1 {
+    position: absolute;
+    left: 10%;
+}
+
+#img2 {
+    position: absolute;
+    left: 70%;
+}
+
+.dropdown {
+            position: absolute;
+            display: inline-block;
+            top: 600px;
+            left: 43.5%;
+        }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+.dropdown-content a {
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+ }
+
+.dropdown-content a:hover {
+            background-color: #ddd;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1>Energy Management System</h1>
+        <h2>Welcome to the Energy Management System (EMS) Dashboard!</h2>
+        <h2></h2>
+    </header>
+    <div class="tiles-container">
+        <div class="tile2" id="ems" onclick="location.href='./public/introtoems.html'"><h2>Intro to EMS</h2></div>
+        <div class="tile2" id="proj" onclick="location.href='./public/aboutproject.html'"><h2>About Project</h2></div>
+        <div class="tile2" id="us" onclick="location.href='./public/aboutus.html'"><h2>About Us</h2></div>
+    </div>  
+    <img id="img1" src="./media/1.jpg"/>
+    <img id="qrmedia" src="./media/qrmedia.png"/>
+    <img id="img2" src="./media/2.jpg"/>
+
+    <div class="dropdown">
+        <button>Dropdown Menu</button>
+        <div class="dropdown-content">
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404594/dashboard">Bulb</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404595/dashboard">Fan</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404621/dashboard">Air Conditioner</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404624/dashboard">Geyser</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404628/dashboard">Television</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1">Refrigerator</a>
+        </div>
+    </div>
+    
+   
+    <footer>©Team Beyond - 1st Sem 2024</footer>
+</body>
+</html>

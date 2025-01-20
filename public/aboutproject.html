@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project</title>
+    <style>
+       
+        html, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5EFE7; /* Light background */
+            color: #213555; /* Primary text color */
+            line-height: 1.6;
+        }
+
+      
+        header {
+            background-color: #213555; /* Dark blue */
+            color: #F5EFE7; /* Light text */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            font-style: italic;
+            color: #D8C4B6;
+        }
+
+      
+        h2 {
+            color: #3E5879; /* Subdued blue-gray */
+            margin: 20px 0 10px;
+            font-size: 24px;
+        }
+
+      
+        p, li {
+            font-size: 18px;
+            color: #213555; /* Primary text color */
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+      
+        img {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #acs {
+            float: right;
+            height: 200px;
+            margin: 20px 50px 20px 20px;
+        }
+
+        #qrP2 {
+            float: left;
+            height: 200px;
+            margin: 20px 20px 20px 0;
+        }
+
+       
+        hr {
+            border: 0;
+            height: 1px;
+            background: #D8C4B6; /* Neutral accent */
+            margin: 20px 0;
+        }
+
+      
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #213555; /* Dark blue */
+            color: #F5EFE7; /* Light text */
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Our Energy Management System</h1>
+        <p>Empowering sustainable energy practices through innovation and technology</p>
+    </header>
+    <h2>Our Mission</h2>
+    <p>To develop a reliable and intuitive energy management system that empowers users to monitor, optimize, and save energy efficiently. By leveraging technology and innovation, we aspire to create a greener and more sustainable future.</p>    
+    <hr/>
+    <h2>Did We Face any Challenges?</h2>
+    <p>
+        <ul>
+            <li>Component Variability: Different circuits required different components, complicating the design process.</li> 
+            <li>Wrong configuration of bulb and holders</li>
+            <li>Loose Connections: Encountered loose connections at multiple points, affecting circuit performance.</li>
+            <li>Damaged Sensor: A spark ignited during testing, which led to the failure of the ACS712 sensor.</li>
+            <li>Wrong Choice of sensor: We chose ACS712 instead for contactless SCT013 current sensor.</li>
+        </ul>
+    </p>
+    <hr/>
+    <img id="acs" src="../media/BurntACS.jpg" alt="Burnt ACS Sensor"/>
+    <h2>Tools and Softwares Used:</h2>
+    <p>
+        <ul>
+            <li>SCT013 current sensor</li>
+            <li>ZMPT010b voltage sensor</li>
+            <li>ESP32 Microcontroller</li>
+            <li>Arduino IDE</li>
+            <li>Blynk platform</li>
+            <li>VS Code for Developing website</li>
+        </ul>
+    </p>
+    <hr/>
+    <img src="../media/qrP2.png" id="qrP2" alt="QR Code for Phase 2 Results"/>
+    <h2>Partial Results (till Phase 2):</h2>
+    <p>
+        <ul>
+            <li><strong>ACS-712 (5A) Current Sensor Circuit:</strong> The results weren’t entirely accurate. The current readings unexpectedly increased when current passed through the bulb.</li>
+            <li><strong>ZMPT101B Voltage Sensor Circuit:</strong> The results weren’t perfect. The voltage increased from 0.81V (residual) to 9.52V–9.7V under load, which wasn’t fully expected.</li>
+            <li><strong>Blynk Dashboard:</strong> Successfully created a dashboard using Blynk that allows real-time monitoring and control of the system.</li>
+        </ul>
+    </p>
+    <hr/>
+    <h2>Final Results:</h2>
+    <p>
+        <ul>
+            <li><strong>SCT013 Current Sensor:</strong> Provided appropriate values when On and Off.</li>
+            <li><strong>ZMPT101b Voltage Sensor:</strong> Delivered accurate readings when On and Off.</li>
+            <li><strong>Blynk Integration with Sensors:</strong> Successfully displayed Current, Voltage, and Power values on the Blynk dashboard, matching the serial monitor.</li>
+            <li><strong>Web Development:</strong> Created a unified website/platform for all devices, redirecting users to respective dashboards upon selection.</li>
+        </ul>
+    </p>
+    <footer>©Team Beyond - 1st Sem 2024</footer>
+</body>
+</html>
